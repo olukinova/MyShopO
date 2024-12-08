@@ -6,4 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Clients\" />
+    <Folder Include="Views\Goods\" />
+    <Folder Include="Views\Producers\" />
+    <Folder Include="Views\Orders\" />
+  </ItemGroup>
+
 </Project>
