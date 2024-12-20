@@ -8,5 +8,10 @@
         public string category { get; set; }
         public string producer { get; set; }
         public int price { get; set; }
+
+        public int ProdusersId { get; set; }
+        public Producers Producer { get; set; }
+
+        public List<Orders> Orders { get; set; }
     }
 }

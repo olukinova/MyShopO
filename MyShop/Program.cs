@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using MyShop.Data;
+
 namespace MyShop
 {
     public class Program
@@ -6,8 +9,13 @@ namespace MyShop
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Регистрация ApplicationDbContext с использованием строки подключения из appsettings.json
+            builder.Services.AddDbContext<MyShopDBContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
 
             var app = builder.Build();
 
